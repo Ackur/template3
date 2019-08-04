@@ -1,9 +1,182 @@
+@font-face {
+  font-family: "sansus";
+  src: url(../fonts/sansus.ttf);
+}
+
+@font-face {
+  font-family: "s1";
+  src: url(../fonts/s1.otf);
+}
+
+@font-face {
+  font-family: "s4";
+  src: url(../fonts/s4.otf);
+}
+
+.s1 {
+  font-family: s1;
+}
+
+.s2 {
+  font-family: s4;
+}
+
 html, body {
   margin: 0;
   padding: 0;
 }
 
 * {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
+}
+
+body {
+  background-color: #e7e7e7;
+  border-top: 10px solid #040404;
+}
+
+main {
+  width: 940px;
+  margin: 0 auto;
+}
+
+main header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 110px;
+  border-bottom: 1px solid #cecece;
+}
+
+main header #logo {
+  display: block;
+  width: 242px;
+  height: 66px;
+  background-image: url(../img/logo.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+main header nav {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 10px;
+}
+
+main header nav a {
+  display: block;
+  font-family: sansus;
+  font-size: 18px;
+  color: #040404;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 68px 10px 10px 10px;
+  transition: all .3s ease;
+}
+
+main header nav a:hover {
+  background-color: #040404;
+  color: #fff;
+}
+
+.active {
+  background-color: #040404;
+  color: #fff;
+}
+
+#slider {
+  display: flex;
+  height: 420px;
+  padding: 15px 0;
+}
+
+#slider .for-bigPhoto {
+  width: 65%;
+}
+
+#slider .for-sliderInfo {
+  position: relative;
+  background-color: #040404;
+  color: #fdfdfd;
+  width: 35%;
+  font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 50px 50px 0px 50px;
+}
+
+#slider .for-sliderInfo .for-sliderProperty {
+  padding: 0;
+  margin: 0;
+}
+
+#slider .for-sliderInfo .for-sliderProperty li {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #1B1B1B;
+  padding: 5px 0;
+}
+
+#slider .for-sliderInfo .for-sliderProperty li:last-child {
+  border-bottom: none;
+}
+
+#slider .for-sliderInfo .for-sliderProperty li span:last-child {
+  color: #646464;
+  font-weight: 100;
+}
+
+#slider .for-sliderInfo .for-totalInfo {
+  font-size: 26px;
+}
+
+#slider .for-sliderInfo .for-sliderBtns {
+  display: flex;
+  margin-top: 5px;
+}
+
+#slider .for-sliderInfo .for-sliderBtns li {
+  list-style: none;
+}
+
+#slider .for-sliderInfo .for-sliderBtns li a {
+  margin-right: 6px;
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #27271D;
+}
+
+#slider .for-sliderInfo .for-sliderBtns li a:hover {
+  background-color: #FF8F00;
+}
+
+#slider .for-sliderInfo .for-more {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 6px 10px;
+  background-color: #FF8F00;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: #fdfdfd;
+  font-size: 16px;
+  font-weight: 100;
+}
+
+#slider .for-sliderInfo .for-more:hover {
+  background-color: #fdfdfd;
+  color: #FF8F00;
+}
+
+.for-sliderBtns--active {
+  background-color: #FF8F00 !important;
 }
 /*# sourceMappingURL=style.css.map */
