@@ -35,14 +35,20 @@ html, body {
 body {
   background-color: #e7e7e7;
   border-top: 10px solid #040404;
+  font-family: sansus;
 }
 
-main {
+.grid {
+  display: grid;
+}
+
+.container {
   width: 940px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
-main header {
+.container header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -50,7 +56,7 @@ main header {
   border-bottom: 1px solid #cecece;
 }
 
-main header #logo {
+.container header #logo {
   display: block;
   width: 242px;
   height: 66px;
@@ -60,14 +66,14 @@ main header #logo {
   background-size: contain;
 }
 
-main header nav {
+.container header nav {
   height: 100%;
   display: flex;
   align-items: flex-end;
   padding-bottom: 10px;
 }
 
-main header nav a {
+.container header nav a {
   display: block;
   font-family: sansus;
   font-size: 18px;
@@ -78,14 +84,14 @@ main header nav a {
   transition: all .3s ease;
 }
 
-main header nav a:hover {
+.container header nav a:hover {
   background-color: #040404;
   color: #fff;
 }
 
 .active {
   background-color: #040404;
-  color: #fff;
+  color: #fff !important;
 }
 
 #slider {
@@ -178,5 +184,122 @@ main header nav a:hover {
 
 .for-sliderBtns--active {
   background-color: #FF8F00 !important;
+}
+
+.services {
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  align-items: baseline;
+  margin-top: 10px;
+}
+
+.services .service {
+  font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
+  font-size: 14px;
+  color: #888888;
+  grid-gap: 20px;
+}
+
+.services .service h3 {
+  text-transform: uppercase;
+  border-bottom: 1px solid #bbb;
+  font-family: sansus;
+  font-size: 1.3em;
+  letter-spacing: 1px;
+  font-weight: 100;
+  color: #040404;
+}
+
+.services .service .for-img, .services .service .for-imgNoActive {
+  border: 10px solid #fff;
+  height: 150px;
+  background: no-repeat center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: background-color .5s ease;
+}
+
+.services .service .for-imgNoActive {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.services .service .for-img:hover {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.services .service ul li:before {
+  content: 'g';
+  font-family: s1;
+  padding-right: 5px;
+}
+
+.services .service a {
+  justify-self: start;
+  font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
+  color: #ad998b;
+  font-style: italic;
+  font-weight: 100;
+  transition: color .3s ease;
+}
+
+.services .service a:hover {
+  color: #5b4636;
+  text-shadow: 0 0px 10px #888;
+}
+
+.services-item li {
+  cursor: pointer;
+  margin: 3px auto;
+  transition: color .5s ease;
+}
+
+.services-item li:hover {
+  color: #FF8F00;
+}
+
+.news .news-item {
+  grid-template-columns: 100px auto;
+  grid-gap: 10px;
+}
+
+.news .news-item img {
+  border: 10px solid #fff;
+  max-width: 100px;
+  height: 100px;
+  grid-row: 1/3;
+}
+
+.news .news-item button {
+  background-color: #FF8F00;
+  color: #fff;
+  justify-self: start;
+  border: none;
+  padding: 7px 15px;
+  cursor: pointer;
+}
+
+footer {
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  align-items: center;
+  height: 25px;
+  background-color: #040404;
+  font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
+  font-size: 10px;
+  color: #888;
+  text-transform: uppercase;
+  padding: 0 10px;
+  margin: 20px 0;
+}
+
+.fa-rss {
+  color: #FF8F00;
+  cursor: pointer;
+  margin-left: 3px;
+}
+
+.footer-email {
+  color: #FF8F00;
 }
 /*# sourceMappingURL=style.css.map */
