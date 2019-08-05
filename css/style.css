@@ -46,6 +46,7 @@ body {
   width: 940px;
   margin: 0 auto;
   overflow: hidden;
+  padding: 0 20px;
 }
 
 .container header {
@@ -248,10 +249,14 @@ body {
   text-shadow: 0 0px 10px #888;
 }
 
+.services-item {
+  list-style: none;
+}
+
 .services-item li {
   cursor: pointer;
   margin: 3px auto;
-  transition: color .5s ease;
+  transition: color .3s ease;
 }
 
 .services-item li:hover {

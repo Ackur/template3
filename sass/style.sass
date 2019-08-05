@@ -20,6 +20,7 @@ body
     width: 940px
     margin: 0 auto
     overflow: hidden
+    padding: 0 20px
     header
         display: flex
         justify-content: space-between
@@ -167,12 +168,14 @@ body
                 color: #5b4636
                 text-shadow: 0 0px 10px #888
 
-.services-item li
-    cursor: pointer
-    margin: 3px auto
-    transition: color .5s ease
-.services-item li:hover
-    color: #FF8F00
+.services-item
+    list-style: none
+    li
+        cursor: pointer
+        margin: 3px auto
+        transition: color .3s ease
+        &:hover
+            color: #FF8F00
 
 .news
     .news-item
